@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head lang="es">
+        <meta charset="UTF-8">
+        <title>Criptografía Alura </title> 
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <div class="contenedor-logo-alura">
+                <img src="images/logo-alura.png" alt="Logo de Alura">
+            </div>
+            <div >
+                <textarea id="mensaje-entrada" class="mensaje" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            </div>
+            <div class="contenedor-advertencia">
+                <img src="images/logo-advertencia.png" alt="Logo de advertencia">
+                <p>Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="contenedor-botones">
+
+                <input id="boton-encriptar" class="boton-encriptar" type="submit" value="Encriptar">
+                <input id="boton-desencriptar" class="boton-desencriptar" type="submit" value="Desencriptar">
+            </div>
+            <div class="contenedor-mensaje-devuelto">
+                <div id="contenedor-primero" class="contenedor-mostrando">
+                    <img class="logo-muneco" src="images/Muñeco.png" alt="Logo de un muñeco">
+                    <div class="contenedor-devuelto-parrafos">
+                        <p class="msg-devuelto-parrafo1">Ningún mensaje fue encontrado</p>
+                        <p class="msg-devuelto-parrafo2">Ingrese el texto que desees encriptar o desencriptar.</p>
+                    </div>
+                </div>
+                <div id="contenedor-segundo" class="contenedor-a-mostrar"> 
+                    <textarea id="msg-devuelto" class="msg-devuelto" cols="25" rows="20"></textarea>
+                    <input id="boton-copiar" class="boton-copiar" type="submit" value="Copiar">
+                </div>
+                
+            </div>
+        </main>
+
+        <script src="principal.js"></script>
+    </body>
+</html>
