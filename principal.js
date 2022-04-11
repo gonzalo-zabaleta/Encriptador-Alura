@@ -1,12 +1,14 @@
-var contenedorPrimero = document.getElementById("contenedor-primero");
-var contenedorSegundo = document.getElementById("contenedor-segundo");
+const contenedorPrimero = document.getElementById("contenedor-primero");
+const contenedorSegundo = document.getElementById("contenedor-segundo");
 
-var textoEntrada = document.getElementById("mensaje-entrada");
-var textoResultado = document.getElementById("msg-devuelto");
+const textoEntrada = document.getElementById("mensaje-entrada");
+const textoResultado = document.getElementById("msg-devuelto");
 
-var botonEncriptar = document.getElementById("boton-encriptar");
-var botonDesencriptar = document.getElementById("boton-desencriptar");
-var botonCopiar = document.getElementById("boton-copiar");
+const botonEncriptar = document.getElementById("boton-encriptar");
+const botonDesencriptar = document.getElementById("boton-desencriptar");
+const botonCopiar = document.getElementById("boton-copiar");
+
+contenedorSegundo.classList.add("esconder");
 
 
 //Boton con su respectivo evento y función para que a la hora de hacer click se encripte el mensaje y se muestre.
@@ -15,8 +17,11 @@ botonEncriptar.addEventListener("click", function(event){
     event.preventDefault();
 
     if(textoEntrada.value.trim() != ""){
+
         contenedorPrimero.classList.add("esconder");
+        contenedorSegundo.classList.remove("esconder");
         contenedorSegundo.classList.add("mostrar");
+
         textoResultado.value = encriptar(textoEntrada.value);
         textoEntrada.value = "";
     }
@@ -36,6 +41,7 @@ botonDesencriptar.addEventListener("click", function(event){
 
     if(textoEntrada.value.trim() != ""){
         contenedorPrimero.classList.add("esconder");
+        contenedorSegundo.classList.remove("esconder");
         contenedorSegundo.classList.add("mostrar");
         textoResultado.value = desencriptar(textoEntrada.value);
         textoEntrada.value = "";

@@ -1,0 +1,27 @@
+.principal{
+
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 70%;
+}
+
+@media screen and (max-width: 375px) {
+    
+    .principal{
+
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 376px){
+    
+    .principal{
+
+        flex-direction: column;
+        margin: 0 auto;
+        width: 80%;
+    }
+}
